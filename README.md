@@ -4,6 +4,11 @@
 Pembuatan model machine learning ini saya lakukan dalam tahap proses pembelajaran saya di bootcamp Fresh graduate academy yang di adakan oleh
 Kementerian Komunikasi dan Informatika bekerja sama dengan binar academy.
 
+* catatan : 
+jika program error ketika anda jalankan, maka install terlebih dahulu requirement yang dibutuhkan, jika masih error maka :
+1. bila terjadi error untuk menginstal imbalanced-learn, buka anaconda prompt anda lalu ketikkan : conda install -c conda-forge imbalanced-learn
+2. bila terjadi error untuk menginstal xgboost, buka anaconda prompt anda lalu ketikkan : pip install xgboost
+
 # Model machine learning
 Model machine learning yang saya buat adalah Xgboost dan logistic regression, nantinya kedua model ini akan dibandingkan model mana yang lebih baik
 dengan melihat akurasi, presisi, F1-call dan recall
