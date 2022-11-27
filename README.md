@@ -4,16 +4,16 @@
 I made this machine learning model during the stage of my learning process at the Fresh graduate academy bootcamp held by
 Ministry of Communication and Information of the Republic of Indonesia in collaboration with Binar Academy.
 
-* Notes : 
-jika program error ketika anda jalankan, maka install terlebih dahulu requirement yang dibutuhkan, jika masih error maka :
-1. bila terjadi error untuk menginstal imbalanced-learn, buka anaconda prompt anda lalu ketikkan : conda install -c conda-forge imbalanced-learn
-2. bila terjadi error untuk menginstal xgboost, buka anaconda prompt anda lalu ketikkan : pip install xgboost
+# Notes : 
+if the program has an error when you run it, then first install the required requirements, if it still has an error then:
+1. If an error occurs while installing imbalanced-learn, open your Anaconda prompt and type: conda install -c conda-forge imbalanced-learn
+2. If an error occurs when installing xgboost, open your Anaconda prompt and type: pip install xgboost
 
-# Model machine learning
-Model machine learning yang saya buat adalah Xgboost dan logistic regression, nantinya kedua model ini akan dibandingkan model mana yang lebih baik
-dengan melihat akurasi, presisi, F1-call dan recall
+# machine learning Model
+The machine learning models that I created are Xgboost and logistic regression, later these two models will be compared which one is better
+by looking at accuracy, precision, F1-call and recall
 
-dalam pembuatan model machine learning ini, hal yang saya lakukan adalah :
+Dalam pembuatan model machine learning ini, hal yang saya lakukan adalah :
 1. Melakukan Exploratory Data Analysis
 Pada tahapan ini saya lakukan untuk mengetahui kolom dan baris dari dataframe yang digunakan. lalu mengecek apakah pada dataframe memiliki 
 kolom bernilai null dan duplikat, hasilnya dataframe tidak memiliki data null dan duplikat.
@@ -50,5 +50,4 @@ machine learning yang dilatih menggunakan oversampling dan undersampling
 Model yang saya buat adalah logistic regression dan XGboost dengan data latih data yang di oversampling dan di undersampling, sehingga total saya membuat 4 model machine learning
 
 6. Evaluasi model machine learning
-untuk evaluasi yang saya lakukan adalah melihat akurasi, presisi, recall dan F1-score dimana didapatkan model Xgboost dengan data train di oversampling memiliki nilai terbaik. dimana 4 parameter tersebut
-memiliki nilai diatas 90% sehingga saya putuskan model xgboost dengan data train oversampling yang saya gunakan untuk mendeteksi data test
+untuk evaluasi yang saya lakukan adalah melihat akurasi, presisi, recall dan F1-score dimana didapatkan model Xgboost dengan data train di oversampling memiliki nilai terbaik. dimana 4 parameter tersebut memiliki nilai diatas 90% sehingga saya putuskan model xgboost dengan data train oversampling yang saya gunakan untuk mendeteksi data test
