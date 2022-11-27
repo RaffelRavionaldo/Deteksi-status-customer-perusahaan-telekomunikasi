@@ -1,10 +1,10 @@
-# Deteksi-status-customer-perusahaan-telekomunikasi
+# Customer churn detection in telecommunications companies
 
 # Disclaimer
-Pembuatan model machine learning ini saya lakukan dalam tahap proses pembelajaran saya di bootcamp Fresh graduate academy yang di adakan oleh
-Kementerian Komunikasi dan Informatika bekerja sama dengan binar academy.
+I made this machine learning model during the stage of my learning process at the Fresh graduate academy bootcamp held by
+Ministry of Communication and Information of the Republic of Indonesia in collaboration with Binar Academy.
 
-* catatan : 
+* Notes : 
 jika program error ketika anda jalankan, maka install terlebih dahulu requirement yang dibutuhkan, jika masih error maka :
 1. bila terjadi error untuk menginstal imbalanced-learn, buka anaconda prompt anda lalu ketikkan : conda install -c conda-forge imbalanced-learn
 2. bila terjadi error untuk menginstal xgboost, buka anaconda prompt anda lalu ketikkan : pip install xgboost
