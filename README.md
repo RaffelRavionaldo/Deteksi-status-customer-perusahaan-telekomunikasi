@@ -25,10 +25,13 @@ sehingga saya memutuskan untuk melakukan sampling sebelum melatih model machine 
 proses pembuatan visualisasi data yang saya lakukan, saya mulai dari membuat pertanyaan terlebih dahulu, yaitu :
 daerah mana yang paling banyak memiliki pelanggan churn dan apakah jumlah panggilan pelanggan ke customer service mempengaruhi pelanggan akan churn?
 hasilnya :
+
 ![image](https://user-images.githubusercontent.com/94748637/196013624-396b18b5-d639-4fae-9de2-4e64e3b84948.png)
+
 Dapat dilihat bahwa pelanggan kita paling banyak berada di area 415 namun di daerah tersebut memiliki jumlah pelanggan churn terbanyak
 
 ![image](https://user-images.githubusercontent.com/94748637/196013648-8b68b75b-42fe-4fc5-a8a6-ac5e6c2c2e73.png)
+
 Dari grafik diatas didapatkan informasi bahwa jumlah customer menghubungi customer service call tidak mempengaruhi apakah customer tersebut akan churn atau tidak.
 
 3. Data preprocessing
