@@ -13,44 +13,44 @@ if the program has an error when you run it, then first install the required req
 The machine learning models that I created are Xgboost and logistic regression, later these two models will be compared which one is better
 by looking at accuracy, precision, F1-call and recall
 
-Dalam pembuatan model machine learning ini, hal yang saya lakukan adalah :
-1. Melakukan Exploratory Data Analysis
-Pada tahapan ini saya lakukan untuk mengetahui kolom dan baris dari dataframe yang digunakan. lalu mengecek apakah pada dataframe memiliki 
-kolom bernilai null dan duplikat, hasilnya dataframe tidak memiliki data null dan duplikat.
-lalu saya mengecek jumlah data pelanggan yang churn dan tidak churn,
-hasilnya untuk data pelanggan churn memiliki data sebanyak 3652 data dan data pelanggan tidak churn sebanyak 598, cukup berbeda jauh sehingga berisiko model akan overfitting
-sehingga saya memutuskan untuk melakukan sampling sebelum melatih model machine learning.
+In making this machine learning model, what I did was:
+1. Conduct Exploratory Data Analysis
+At this stage I did it to find out the columns and rows of the dataframe used. then check if the dataframe has
+the column is null and duplicate, the result is that the dataframe does not have null and duplicate data.
+then I checked the amount of churn and non-churn customer data,
+the results for churn customer data have 3652 data and 598 customer data that do not churn, are quite different so there is a risk that the model will overfitting
+so I decided to do some sampling before training the machine learning model.
 
-2. Visualisasi Data
-proses pembuatan visualisasi data yang saya lakukan, saya mulai dari membuat pertanyaan terlebih dahulu, yaitu :
-daerah mana yang paling banyak memiliki pelanggan churn dan apakah jumlah panggilan pelanggan ke customer service mempengaruhi pelanggan akan churn?
-hasilnya :
+2. Data Visualization
+the process of making the data visualization that I did, I started by making a question first, namely:
+which areas have the most churn customers and does the number of customer calls affect customer service churn?
+result :
 
 ![image](https://user-images.githubusercontent.com/94748637/196013624-396b18b5-d639-4fae-9de2-4e64e3b84948.png)
 
-Dapat dilihat bahwa pelanggan kita paling banyak berada di area 415 namun di daerah tersebut memiliki jumlah pelanggan churn terbanyak
+It can be seen that most of our customers are in the 415 area but that area has the highest number of churned customers
 
 ![image](https://user-images.githubusercontent.com/94748637/196013648-8b68b75b-42fe-4fc5-a8a6-ac5e6c2c2e73.png)
 
-Dari grafik diatas didapatkan informasi bahwa jumlah customer menghubungi customer service call tidak mempengaruhi apakah customer tersebut akan churn atau tidak.
+From the graph above, information is obtained that the number of customers contacting a customer service call does not affect whether the customer will churn or not.
 
 3. Data preprocessing
-Yang pertama saya lakukan adalah mengubah kolom yang bertipe kategorikal yang memiliki 2 nilai menjadi numeric agar bisa mengetahui korelasi antara kolom kategorik dengan kolom churn
+The first thing I did was change the categorical column which has 2 values to be numeric so I could find out the correlation between the categorical column and the churn column.
 
-lalu saya melihat korelasi antar kolom dengan kolom churn (karena kolom churn adalah kolom yang ingin di deteksi) dan didapatkan hasil seperti berikut :
+then I looked at the correlation between the columns and the churn column (because the churn column is the column you want to detect) and got the following results:
 
 ![image](https://user-images.githubusercontent.com/94748637/196013682-f3f1ff5d-e0f9-4d7b-bd0e-f867c72afefd.png)
 
-Dapat dilihat bahwa korelasi antar kolom dengan kolom churn itu cukup rendah, paling tinggi berada di nilai 0,25. sehingga saya memutuskan untuk mengambil kolom dengan korelasi diatas 0.1
+It can be seen that the correlation between the columns and the churn column is quite low, the highest is at 0.25. so I decided to take a column with a correlation above 0.1
 
-langkah selanjutnya adalah melakukan standarisasi pada kolom numeric dan one-hot encoding untuk kolom kategorik untuk meningkatkan kualitas dari model machine learning
+The next step is to standardize the numeric column and one-hot encoding for the categorical column to improve the quality of the machine learning model
 
 4. Sampling
-saya melakukan 2 macam sampling, yaitu oversampling menggunakan SMOTE dan undersampling menggunakan random under sampler. hal ini dilakukan untuk mengetahui apakah ada perbedaan untuk hasil model
-machine learning yang dilatih menggunakan oversampling dan undersampling
+I did 2 kinds of sampling, namely oversampling using SMOTE and undersampling using a random under sampler. this is done to find out whether there is a difference to the model results
+machine learning trained using oversampling and undersampling
 
-5. Membuat model machine learning
-Model yang saya buat adalah logistic regression dan XGboost dengan data latih data yang di oversampling dan di undersampling, sehingga total saya membuat 4 model machine learning
+5. Create machine learning models
+The models I created were logistic regression and XGboost with oversampled and undersampled training data, so that in total I made 4 machine learning models
 
-6. Evaluasi model machine learning
-untuk evaluasi yang saya lakukan adalah melihat akurasi, presisi, recall dan F1-score dimana didapatkan model Xgboost dengan data train di oversampling memiliki nilai terbaik. dimana 4 parameter tersebut memiliki nilai diatas 90% sehingga saya putuskan model xgboost dengan data train oversampling yang saya gunakan untuk mendeteksi data test
+6. Evaluation of machine learning models
+for the evaluation that I did was to look at accuracy, precision, recall and F1-score where it was found that the Xgboost model with the train data in oversampling had the best value. where these 4 parameters have values ​​above 90% so I decided on the xgboost model with oversampling train data which I used to detect test data
